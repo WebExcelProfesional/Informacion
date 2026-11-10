@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>WEBEXCEL – Soluciones Web Profesionales</title>
 <meta name="description" content="Páginas web profesionales, rápidas y adaptadas a celulares para tu negocio. Cotiza gratis por WhatsApp.">
+<meta name="theme-color" content="#0f172a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WEBEXCEL – Soluciones Web Profesionales">
+<meta property="og:description" content="Páginas web modernas, rápidas y adaptadas a celulares. Cotiza gratis por WhatsApp.">
+<meta property="og:locale" content="es_VE">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -140,8 +146,47 @@ footer p{margin:0;font-size:.85rem}
 .fab span{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .4s,padding .4s}
 .fab:hover span{max-width:220px;padding-left:10px}
 .hide{display:none!important}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.vals{display:grid;gap:16px}
+.val{display:flex;gap:16px;align-items:flex-start;background:var(--bg);border:1px solid var(--bd);border-radius:16px;padding:20px}
+.val .ic{margin:0;flex:none;width:44px;height:44px;font-size:1.15rem}
+.val h3{font-size:1.02rem;margin-bottom:4px}
+.val p{margin:0;font-size:.88rem;color:var(--mu)}
+.fcol{display:grid;gap:10px;font-size:.9rem;align-content:start}
+.fcol b{color:#fff;font-size:.95rem}
+.fcol a:hover{color:#fff}
+@media (max-width:900px){.ab{grid-template-columns:1fr}}
 @media (max-width:900px){.hg,.cg{grid-template-columns:1fr}.c3,.c4{grid-template-columns:1fr 1fr}.links,.hcta{display:none}.burger{display:block}.hero{padding-top:48px}}
-@media (max-width:620px){.c3,.c4,.opts{grid-template-columns:1fr}.sec{padding:60px 0}.calc{padding:24px}.stats{gap:8px}.hero .dev{max-width:420px;margin:0 auto}}
+@media (max-width:620px){
+body{overflow-x:clip}
+.w{padding:0 16px}
+.c3,.c4,.opts,.opts.two{grid-template-columns:1fr}
+.sec{padding:56px 0}
+.hero{padding:36px 0 56px}
+.nav{height:64px}
+.logo{font-size:1.3rem}.mark{width:36px;height:36px}
+.burger{min-width:44px;min-height:44px}
+.mob a{padding:14px 12px}
+h1{font-size:2rem;margin:14px 0}
+h2{font-size:1.65rem}
+.hero p.mu{font-size:1.02rem!important}
+.ctas{flex-direction:column}.ctas .btn{width:100%}
+.btn{min-height:48px}
+.fb{min-height:42px}
+.stats{grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}.stats b{font-size:1.05rem}.stats span{font-size:.7rem;display:block;line-height:1.3}
+.hero .dev{max-width:360px;margin:0 auto}
+.card{padding:22px}
+.calc{padding:22px 16px;border-radius:18px}
+.tot{flex-direction:column;align-items:stretch;text-align:center}.tot .btn{width:100%}
+.cg,.ab{gap:32px}
+.fm{padding:22px 18px;border-radius:18px}
+input[type=text],input[type=tel],textarea{font-size:16px}
+footer .w{flex-direction:column;align-items:flex-start!important;gap:24px;text-align:left}
+.fab{right:14px;padding:13px}
+.badge{font-size:.68rem}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -163,11 +208,10 @@ footer p{margin:0;font-size:.85rem}
 <header>
  <div class="w nav">
   <a href="#inicio" class="logo" aria-label="WEBEXCEL, inicio"><span class="mark"><svg class="i"><use href="#code"/></svg></span><span>WEB<b>EXCEL</b></span></a>
-  <nav class="links" aria-label="Principal"><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#portafolio">Portafolio</a><a href="#cotizador">Cotizador</a><a href="#planes">Planes</a><a href="#contacto">Contacto</a></nav>
-  <a class="btn btn-p hcta" style="padding:10px 20px;font-size:.9rem" data-wa target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Contactar</a>
+  <nav class="links" aria-label="Principal"><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#portafolio">Portafolio</a><a href="#cotizador">Cotizador</a><a href="#planes">Planes</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav>
   <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
  </div>
- <div class="mob" id="mob"><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#portafolio">Portafolio</a><a href="#cotizador">Cotizador</a><a href="#planes">Planes</a><a href="#contacto">Contacto</a><a class="btn btn-g" data-wa target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Escríbenos al WhatsApp</a></div>
+ <div class="mob" id="mob"><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#portafolio">Portafolio</a><a href="#cotizador">Cotizador</a><a href="#planes">Planes</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a><a class="btn btn-g" data-wa target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Escríbenos al WhatsApp</a></div>
 </header>
 
 <main>
@@ -237,6 +281,17 @@ footer p{margin:0;font-size:.85rem}
   <div class="card plan"><div><h3>Tienda / Catálogo</h3><p class="mu">Para negocios que quieren mostrar y vender productos en línea.</p><div class="price">Desde $180 <small>/ ventas directas</small></div><ul><li><svg class="i"><use href="#ck"/></svg>Catálogo interactivo de productos</li><li><svg class="i"><use href="#ck"/></svg>Carrito de compras o cotizaciones</li><li><svg class="i"><use href="#ck"/></svg>Pedidos estructurados al WhatsApp</li><li><svg class="i"><use href="#ck"/></svg>Panel autogestionable sencillo</li></ul></div><a class="btn btn-s" data-wa="Hola! Me interesa el plan Tienda / Catálogo." target="_blank" rel="noopener">Consultar plan</a></div>
  </div></div></section>
 
+<section id="nosotros" class="sec"><div class="w ab">
+ <div><span class="eyebrow">Quiénes somos</span><h2 style="margin-bottom:18px">Tu página web, hecha con trato directo</h2>
+  <p class="mu">En WEBEXCEL creamos páginas web a la medida de emprendedores y empresas que quieren verse profesionales en internet y recibir más clientes.</p>
+  <p class="mu">Hablas directamente con quien diseña tu sitio: te explicamos cada paso en lenguaje sencillo y te acompañamos después de la entrega.</p>
+  <div class="ctas"><a class="btn btn-p" data-wa="¡Hola WEBEXCEL! Quisiera conocer más sobre sus servicios." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Hablemos de tu proyecto</a></div></div>
+ <div class="vals">
+  <div class="val"><div class="ic"><svg class="i"><use href="#head"/></svg></div><div><h3>Atención personalizada</h3><p>Una sola persona de contacto desde la idea hasta la entrega.</p></div></div>
+  <div class="val"><div class="ic"><svg class="i"><use href="#shield"/></svg></div><div><h3>Precios claros</h3><p>Sabes cuánto pagas antes de empezar, sin cobros ocultos.</p></div></div>
+  <div class="val"><div class="ic"><svg class="i"><use href="#up"/></svg></div><div><h3>Enfocados en resultados</h3><p>Cada página está pensada para que tus clientes te escriban por WhatsApp.</p></div></div>
+ </div></div></section>
+
 <section id="contacto" class="sec" style="background:var(--sf);border-top:1px solid var(--bd)"><div class="w cg">
  <div><span class="eyebrow">Preguntas frecuentes</span><h2 style="margin-bottom:28px">Resolvemos tus dudas</h2>
   <details open><summary>¿Cuánto tarda en estar lista mi web?</summary><p>Los sitios sencillos se entregan en 3 a 7 días hábiles, una vez que tenemos la información de tu negocio.</p></details>
@@ -251,7 +306,12 @@ footer p{margin:0;font-size:.85rem}
 </div></section>
 </main>
 
-<footer><div class="w"><a href="#inicio" class="logo"><span class="mark" style="width:32px;height:32px;font-size:.9rem"><svg class="i"><use href="#code"/></svg></span>WEB<b>EXCEL</b></a><p>© 2026 WEBEXCEL – Soluciones Web Profesionales. Todos los derechos reservados.</p><a class="btn btn-g" style="padding:10px 18px;font-size:.88rem" data-wa target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>WhatsApp</a></div></footer>
+<footer><div class="w" style="align-items:flex-start">
+ <div style="max-width:320px"><a href="#inicio" class="logo"><span class="mark" style="width:32px;height:32px;font-size:.9rem"><svg class="i"><use href="#code"/></svg></span>WEB<b>EXCEL</b></a><p style="margin-top:14px">Diseñamos páginas web profesionales para emprendedores y empresas.</p></div>
+ <div class="fcol"><b>Navegación</b><a href="#servicios">Servicios</a><a href="#portafolio">Portafolio</a><a href="#planes">Planes</a><a href="#nosotros">Nosotros</a></div>
+ <div class="fcol"><b>Contacto</b><a data-wa target="_blank" rel="noopener">WhatsApp: +58 416 262 9963</a><a href="#contacto">Formulario de contacto</a></div>
+</div>
+<div class="w" style="border-top:1px solid var(--nb);margin-top:28px;padding-top:20px"><p>© 2026 WEBEXCEL – Soluciones Web Profesionales. Todos los derechos reservados.</p><p>Los datos del formulario se usan solo para responderte por WhatsApp.</p></div></footer>
 
 <a class="fab" data-wa="¡Hola WEBEXCEL! Quiero información sobre sus servicios de páginas web." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg class="i"><use href="#wa"/></svg><span>¿Hablamos por WhatsApp?</span></a>
 
@@ -280,6 +340,13 @@ function calc(){
  qb.href=wa('Hola WEBEXCEL, calculé una cotización para un paquete '+P[t][1]+(ex.length?' con extras ('+ex.join(', ')+')':'')+' por un aproximado de $'+total+' USD. Quisiera contratar el servicio.');
 }
 document.querySelectorAll('.calc input').forEach(i=>i.addEventListener('change',calc));calc();
+// animaciones al hacer scroll
+const els=document.querySelectorAll('.card,.val,.fm,details,.dev,.calc,.sec .tc');
+if('IntersectionObserver' in window){
+ els.forEach(e=>e.classList.add('rv'));
+ const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);setTimeout(()=>x.target.classList.remove('rv','in'),800)}}),{threshold:.12});
+ els.forEach(e=>io.observe(e));
+}
 // formulario
 document.getElementById('f').addEventListener('submit',e=>{
  e.preventDefault();
